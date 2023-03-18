@@ -88,13 +88,15 @@ window.onload = () => {
     const pixelsBoard = document.getElementById('pixel-board');
     for (let index = 1; index <= sizeSquad; index += 1) {
       let line = document.createElement('div');
+      line.style.lineHeight = '0'
       pixelsBoard.appendChild(line);
     }
     let linesSquad = document.querySelectorAll('#pixel-board>div');
     for (let line of linesSquad) {
       for (let index = 1; index <= sizeSquad; index += 1) {
         let pixel = document.createElement('div');
-        pixel.className = 'pixel';
+        pixel.classList.add('pixel');
+        pixel.classList.add('col');
         pixel.addEventListener('click', () => {
           pixel.style.backgroundColor = colorPaletaSelected;
           savePixel();
