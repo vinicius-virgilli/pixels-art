@@ -60,9 +60,9 @@ window.onload = () => {
   }
 
   //Adicionando evento no botão para mudar o tamanho do quadro de pixels
-  let sizeSquad = 5;
   document.getElementById('generate-board').addEventListener('click', () => {
     let input = document.getElementById('board-size').value;
+    inputPlaceHolder = `${sizeSquad}`;
     if (input == '') {
       alert('Board inválido!');
     } else if (input >= 5 && input <=50) {
@@ -79,6 +79,11 @@ window.onload = () => {
       window.location.reload();
     }
   })
+
+  //CAPTURANDO ELEMENTOS 
+  let sizeSquad = 5;
+  let inputPlaceHolder = sizeSquad;
+
 
   //Fazendo o quadrado de sizeSquad por sizeSquad de pixels
   if (localStorage.getItem('boardSize') !== null) {
