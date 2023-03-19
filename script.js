@@ -1,4 +1,3 @@
-
 // vamos executar todos os comandos para executar após o carregamento da página
 
 window.onload = () => {
