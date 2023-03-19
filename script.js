@@ -68,7 +68,7 @@ window.onload = () => {
     let input = document.getElementById('board-size').value;
     if (input == '') {
       alert('Board inválido!');
-    } else if (input >= 5 && input <=50) {
+    } else if (input >= 5 && input <=80) {
         sizeSquad = input;
         saveSizeSquad();
         window.location.reload();
@@ -76,8 +76,8 @@ window.onload = () => {
       sizeSquad = 5;
       saveSizeSquad();
         window.location.reload();
-    } else if (input > 50) {
-      sizeSquad = 50;
+    } else if (input > 80) {
+      sizeSquad = 80;
       saveSizeSquad();
       window.location.reload();
     }
