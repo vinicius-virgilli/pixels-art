@@ -1,3 +1,4 @@
+
 // vamos executar todos os comandos para executar após o carregamento da página
 
 window.onload = () => {
@@ -12,18 +13,20 @@ window.onload = () => {
   };
 
   //Adiciona a cor preta ao primeiro quadrado da paleta de cores
+  //E adiciona cor branca ao segundo quadrado da paleta de cores
   const paletaDeCores = document.querySelectorAll('.color');
   paletaDeCores[0].style.backgroundColor = 'black';
+  paletaDeCores[1].style.backgroundColor = 'white';
 
   //verificando cores da paleta de cores no localStorage e atualizando as cores
 
   if (localStorage.getItem('colorPalette') !== null) {
     let colorPalette = JSON.parse(localStorage.getItem('colorPalette'));
-    for (let index = 1; index < paletaDeCores.length; index += 1) {
+    for (let index = 2; index < paletaDeCores.length; index += 1) {
       paletaDeCores[index].style.backgroundColor = colorPalette[index];
     }
   } else {
-    for (let index = 1; index < paletaDeCores.length; index += 1) {
+    for (let index = 2; index < paletaDeCores.length; index += 1) {
       paletaDeCores[index].style.backgroundColor = randomColor();
     }
   }
@@ -32,7 +35,7 @@ window.onload = () => {
   const btnCoresAleatorias = document.getElementById('button-random-color');
 
   btnCoresAleatorias.addEventListener('click', () => {
-    for (let index = 1; index < paletaDeCores.length; index += 1) {
+    for (let index = 2; index < paletaDeCores.length; index += 1) {
       paletaDeCores[index].style.backgroundColor = randomColor();
       if (
         paletaDeCores[index] == 'black' ||
@@ -60,9 +63,9 @@ window.onload = () => {
   }
 
   //Adicionando evento no botão para mudar o tamanho do quadro de pixels
+  let sizeSquad = 5;
   document.getElementById('generate-board').addEventListener('click', () => {
     let input = document.getElementById('board-size').value;
-    inputPlaceHolder = `${sizeSquad}`;
     if (input == '') {
       alert('Board inválido!');
     } else if (input >= 5 && input <=50) {
@@ -79,11 +82,6 @@ window.onload = () => {
       window.location.reload();
     }
   })
-
-  //CAPTURANDO ELEMENTOS 
-  let sizeSquad = 5;
-  let inputPlaceHolder = sizeSquad;
-
 
   //Fazendo o quadrado de sizeSquad por sizeSquad de pixels
   if (localStorage.getItem('boardSize') !== null) {
