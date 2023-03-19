@@ -1,3 +1,4 @@
+
 // vamos executar todos os comandos para executar após o carregamento da página
 
 window.onload = () => {
@@ -12,9 +13,10 @@ window.onload = () => {
   };
 
   //Adiciona a cor preta ao primeiro quadrado da paleta de cores
+  //E adiciona cor branca ao segundo quadrado da paleta de cores
   const paletaDeCores = document.querySelectorAll('.color');
   paletaDeCores[0].style.backgroundColor = 'black';
-  paletaDecores[1].style.backgroundColor = 'white';
+  paletaDeCores[1].style.backgroundColor = 'white';
 
   //verificando cores da paleta de cores no localStorage e atualizando as cores
 
@@ -61,9 +63,9 @@ window.onload = () => {
   }
 
   //Adicionando evento no botão para mudar o tamanho do quadro de pixels
+  let sizeSquad = 5;
   document.getElementById('generate-board').addEventListener('click', () => {
     let input = document.getElementById('board-size').value;
-    inputPlaceHolder = `${sizeSquad}`;
     if (input == '') {
       alert('Board inválido!');
     } else if (input >= 5 && input <=50) {
@@ -80,11 +82,6 @@ window.onload = () => {
       window.location.reload();
     }
   })
-
-  //CAPTURANDO ELEMENTOS 
-  let sizeSquad = 5;
-  let inputPlaceHolder = sizeSquad;
-
 
   //Fazendo o quadrado de sizeSquad por sizeSquad de pixels
   if (localStorage.getItem('boardSize') !== null) {
