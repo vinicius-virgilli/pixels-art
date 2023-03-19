@@ -14,16 +14,17 @@ window.onload = () => {
   //Adiciona a cor preta ao primeiro quadrado da paleta de cores
   const paletaDeCores = document.querySelectorAll('.color');
   paletaDeCores[0].style.backgroundColor = 'black';
+  paletaDecores[1].style.backgroundColor = 'white';
 
   //verificando cores da paleta de cores no localStorage e atualizando as cores
 
   if (localStorage.getItem('colorPalette') !== null) {
     let colorPalette = JSON.parse(localStorage.getItem('colorPalette'));
-    for (let index = 1; index < paletaDeCores.length; index += 1) {
+    for (let index = 2; index < paletaDeCores.length; index += 1) {
       paletaDeCores[index].style.backgroundColor = colorPalette[index];
     }
   } else {
-    for (let index = 1; index < paletaDeCores.length; index += 1) {
+    for (let index = 2; index < paletaDeCores.length; index += 1) {
       paletaDeCores[index].style.backgroundColor = randomColor();
     }
   }
@@ -32,7 +33,7 @@ window.onload = () => {
   const btnCoresAleatorias = document.getElementById('button-random-color');
 
   btnCoresAleatorias.addEventListener('click', () => {
-    for (let index = 1; index < paletaDeCores.length; index += 1) {
+    for (let index = 2; index < paletaDeCores.length; index += 1) {
       paletaDeCores[index].style.backgroundColor = randomColor();
       if (
         paletaDeCores[index] == 'black' ||
