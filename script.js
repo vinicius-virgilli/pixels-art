@@ -157,6 +157,12 @@ window.onload = () => {
     localStorage.setItem('boardSize', JSON.stringify(sizeSquad));
   }
 
+  //declarando placeHolder do input
+  let input = document.getElementById('board-size');
+  input.placeholder = sizeSquad;
+  
+
+
   //paletaDeCores[0].className += ' selected';
   paletaDeCores[0].classList.add('selected');
 };
