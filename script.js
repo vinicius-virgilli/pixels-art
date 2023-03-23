@@ -85,7 +85,7 @@ window.onload = () => {
   //Fazendo o quadrado de sizeSquad por sizeSquad de pixels
   if (localStorage.getItem('boardSize') !== null) {
     sizeSquad = JSON.parse(localStorage.getItem('boardSize'))
-  } else { sizeSquad = 5;}
+  } else { sizeSquad = 15;}
   const madeSquad = () => {
     const pixelsBoard = document.getElementById('pixel-board');
     for (let index = 1; index <= sizeSquad; index += 1) {
@@ -141,6 +141,12 @@ window.onload = () => {
     const colorPalette = colorPaletteArray();
     localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
   };
+
+  //adicionando evento no título
+  const title = document.getElementById('title');
+  title.addEventListener('click', () => {
+    window.location.reload()
+  });
 
   //Salvando as cores dos pixels no localStorage
   const savePixel = () => {
