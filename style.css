@@ -5,12 +5,14 @@
 }
 
 body {
-  font-size: x-large;
-  background-color: rgb(220, 199, 140);
+  background-image: url('Design\ sem\ nome\ \(1\).png');
+  font-size:x-large;
+  color: white;
   font-family: 'Lobster', cursive;
 }
 
 .color {
+  box-shadow: 3px 3px 3px #ffffff;
   border-radius: 100%;
   margin: 1px;
   width: 40px;
@@ -70,4 +72,13 @@ body {
   margin: auto;
   text-align: justify;
   width: 210px;
+}
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
