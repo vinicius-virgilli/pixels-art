@@ -12,8 +12,9 @@
 }
 
 body {
+  background-image: url('Design\ sem\ nome\ \(1\).png');
   font-size:x-large;
-  background-color: rgb(220, 199, 140);
+  color: white;
   font-family: 'Lobster', cursive;
 }
 
@@ -22,6 +23,7 @@ body {
 }
 
 .color {
+  box-shadow: 3px 3px 3px #ffffff;
   border-radius: 100%;
   margin: 1px;
   width: 40px;
@@ -111,4 +113,16 @@ body {
   text-align: justify;
   width: 70px;
 }
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+
+
 
