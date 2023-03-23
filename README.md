@@ -4,8 +4,10 @@
 
 #### Como usar?
 
-- escolha o tamanho do seu bord para criar sua arte! Alterando o número
+- escolha o tamanho do seu bord para criar sua arte! Alterando o número e clicando no botão VQV
 - Pode gerar cores aleatórias cricando no botão cores aleatórias quantas vezes quiser
-- para escolha uma cor e selecione-a clicando sobre ela
+- para escolher uma cor selecione-a clicando sobre ela
 - Agora só pintar os pixels clicando neles um por um!
+
+OBS: As cores preta e branca sempre estão disponíveis!
 
