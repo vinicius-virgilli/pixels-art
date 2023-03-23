@@ -9,56 +9,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Pixels Art</title>
-    <link rel="stylesheet" href="style.css" />
     <video autoplay muted loop id="video-background">
-      <source src="Design sem nome.mp4" type="video/mp4">
+      <source src="imagens-video/Design sem nome.mp4" type="video/mp4">
     </video>
+    <link rel="stylesheet" href="style.css" />
     
     
   <body>
-    <h1 id="title">Paleta de Cores</h1>
-    <div id="top-container">
-      <div id="color-palette" class="color-palette">
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-      </div>
-      <button id="button-random-color" class="btn-success">Cores aleatórias</button>
+    <div class="title">
+      <h1 id="title">Paleta de Cores</h1>
     </div>
-    <div id="clear-board">
-      <div class="board-size">
-        <label for="board-size" class="form-label">Tamanho do board
-        <input min="1" type="number" id="board-size" value="" placeholder="" class="form-input" value="5">
-        </label>
-        <button id="generate-board" class="btn-success">VQV</button>
+    <div class="main-container">
+      <div id="top-container">
+        <div class="bottom-container">
+          <button id="button-random-color" >Cores aleatórias</button>
+        </div>
+        <div id="color-palette">
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+        </div>
       </div>
-      <label for="clear-board" class="form-label">
-      <button id="clear-board" class="btn-success">Limpar</button>
-    </label>
+      
+      <div class="Board">
+        <div id="pixel-board"></div>
+      </div>
+      <div id="clear-board">
 
+        <div class="board-size">
+          <label for="board-size" class="form-label">Tamanho do board
+          <input min="5" type="number" id="board-size" value="" placeholder="" class="form-input" value="5">
+          </label>
+          <button id="generate-board" >VQV</button>
+        </div>
+
+        <div class="limpar">
+        <label class="form-label" form="Clear-board">
+          <button id="Clear-board">Limpar</button>
+        </label>
+        </div>
+
+        <aside class="social">
+          <a href="https://www.linkedin.com/in/vinicius-silva-virgilli/" target="_blank" rel="noopener noreferrer"><img src="imagens-video/linkedin (cópia).png" alt=""></a>
+          <a href="https://github.com/vinicius-virgilli" target="_blank" rel="noopener noreferrer"><img src="imagens-video/logo-github (cópia).png" alt="" id="Github"></a>
+          <a href="https://web.whatsapp.com/send?phone=62982585506" target="_blank" rel="noopener noreferrer"><img src="imagens-video/logo-whatsapp (cópia).png" alt=""></a>
+        </aside>
+
+      </div>
     </div>
-    <div id="pixel-board"></div>
     <script src="script.js"></script>
   </body>
 </html>
