@@ -12,6 +12,7 @@ window.onload = () => {
   };
 
   //Adiciona a cor preta ao primeiro quadrado da paleta de cores
+  //E adiciona cor branca ao segundo quadrado da paleta de cores
   const paletaDeCores = document.querySelectorAll('.color');
   paletaDeCores[0].style.backgroundColor = 'black';
   paletaDeCores[1].style.backgroundColor = 'white';
@@ -61,12 +62,12 @@ window.onload = () => {
   }
 
   //Adicionando evento no botão para mudar o tamanho do quadro de pixels
+  let sizeSquad = 5;
   document.getElementById('generate-board').addEventListener('click', () => {
     let input = document.getElementById('board-size').value;
-    inputPlaceHolder = `${sizeSquad}`;
     if (input == '') {
       alert('Board inválido!');
-    } else if (input >= 5 && input <=50) {
+    } else if (input >= 5 && input <=80) {
         sizeSquad = input;
         saveSizeSquad();
         window.location.reload();
@@ -74,17 +75,12 @@ window.onload = () => {
       sizeSquad = 5;
       saveSizeSquad();
         window.location.reload();
-    } else if (input > 50) {
-      sizeSquad = 50;
+    } else if (input > 80) {
+      sizeSquad = 80;
       saveSizeSquad();
       window.location.reload();
     }
   })
-
-  //CAPTURANDO ELEMENTOS 
-  let sizeSquad = 5;
-  let inputPlaceHolder = sizeSquad;
-
 
   //Fazendo o quadrado de sizeSquad por sizeSquad de pixels
   if (localStorage.getItem('boardSize') !== null) {
