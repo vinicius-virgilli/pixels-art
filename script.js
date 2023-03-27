@@ -69,7 +69,7 @@ window.onload = () => {
       alert('Board inválido!');
     } else if (input >= 5 && input <=21) {
         sizeSquad = input;
-        saveSizeSquad();
+        saveSizeSquad();  
         window.location.reload();
     } else if (input < 5) {
       sizeSquad = 5;
@@ -84,7 +84,11 @@ window.onload = () => {
 
   // Função que ajusta a dimensão dos pixels de acordo com o tamanho do board
   const pixelDimension = (sizeSquad) => {
-    return (80 - (3.793*(sizeSquad - 5)));
+    if (window.innerWidth < 658) {
+      return 19.31
+    } else {
+      return (80 - (3.793*(sizeSquad - 5)));
+    }
   }
 
   //Fazendo o quadrado de sizeSquad por sizeSquad de pixels
@@ -107,13 +111,12 @@ window.onload = () => {
         pixel.classList.add('col');
         pixel.style.width = `${pixeldimension}px`;
         pixel.style.height = `${pixeldimension}px`;
+        pixel.classList.add('mobile');
         pixel.addEventListener('click', () => {
           pixel.style.backgroundColor = colorPaletaSelected;
           savePixel();
         });
         line.appendChild(pixel);
-        document.querySelector('.pixel').style.width = `${pixeldimension}`;
-        document.querySelector('.pixel').style.height = `${pixeldimension}`;
       }
     }
   };

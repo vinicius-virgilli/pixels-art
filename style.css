@@ -94,8 +94,6 @@ body {
 
 .pixel {
   box-sizing: border-box;
-  /* width: 19.3px;
-  height: 19.3px; */
   display: inline-block;
   background-color: white;
   border: 1px solid black;
