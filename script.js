@@ -62,7 +62,7 @@ window.onload = () => {
   }
 
   //Adicionando evento no botão para mudar o tamanho do quadro de pixels
-  let sizeSquad = 5;
+  let sizeSquad = 21;
   document.getElementById('generate-board').addEventListener('click', () => {
     let input = document.getElementById('board-size').value;
     if (input == '') {
@@ -75,8 +75,8 @@ window.onload = () => {
       sizeSquad = 5;
       saveSizeSquad();
         window.location.reload();
-    } else if (input > 80) {
-      sizeSquad = 80;
+    } else if (input > 21) {
+      sizeSquad = 21;
       saveSizeSquad();
       window.location.reload();
     }
