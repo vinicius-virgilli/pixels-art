@@ -94,8 +94,8 @@ body {
 
 .pixel {
   box-sizing: border-box;
-  width: 19.3px;
-  height: 19.3px;
+  /* width: 19.3px;
+  height: 19.3px; */
   display: inline-block;
   background-color: white;
   border: 1px solid black;
@@ -154,6 +154,7 @@ img:hover {
   .main-container {
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 30px;
   }
 
   #top-container {

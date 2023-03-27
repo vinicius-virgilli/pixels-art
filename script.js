@@ -62,7 +62,7 @@ window.onload = () => {
   }
 
   //Adicionando evento no botão para mudar o tamanho do quadro de pixels
-  let sizeSquad = 21;
+  let sizeSquad = 5;
   document.getElementById('generate-board').addEventListener('click', () => {
     let input = document.getElementById('board-size').value;
     if (input == '') {
@@ -82,10 +82,16 @@ window.onload = () => {
     }
   })
 
+  // Função que ajusta a dimensão dos pixels de acordo com o tamanho do board
+  const pixelDimension = (sizeSquad) => {
+    return (80 - (3.793*(sizeSquad - 5)));
+  }
+
   //Fazendo o quadrado de sizeSquad por sizeSquad de pixels
   if (localStorage.getItem('boardSize') !== null) {
     sizeSquad = JSON.parse(localStorage.getItem('boardSize'))
   } else { sizeSquad = 15;}
+  const pixeldimension = pixelDimension(sizeSquad);
   const madeSquad = () => {
     const pixelsBoard = document.getElementById('pixel-board');
     for (let index = 1; index <= sizeSquad; index += 1) {
@@ -99,11 +105,15 @@ window.onload = () => {
         let pixel = document.createElement('div');
         pixel.classList.add('pixel');
         pixel.classList.add('col');
+        pixel.style.width = `${pixeldimension}px`;
+        pixel.style.height = `${pixeldimension}px`;
         pixel.addEventListener('click', () => {
           pixel.style.backgroundColor = colorPaletaSelected;
           savePixel();
         });
         line.appendChild(pixel);
+        document.querySelector('.pixel').style.width = `${pixeldimension}`;
+        document.querySelector('.pixel').style.height = `${pixeldimension}`;
       }
     }
   };
